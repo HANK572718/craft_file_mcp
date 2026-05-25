@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.HANK572718/craft-file-mcp",
+  "description": "Upload and download files to/from Craft.do without passing file bytes through the LLM context.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/HANK572718/craft_file_mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "craft-file-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "CRAFT_API_BASE_URL",
+          "description": "Craft API base URL with embedded token (Craft app: Imagine -> Settings -> API). Treat as a secret.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

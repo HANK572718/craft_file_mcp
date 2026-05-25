@@ -1,0 +1,59 @@
+{
+  "name": "craft-file-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for uploading and downloading files to/from Craft.do without passing file bytes through the LLM context.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "craft-file-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "server.json",
+    ".env.example"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "modelcontextprotocol",
+    "mcp-server",
+    "craft",
+    "craft.do",
+    "file-upload",
+    "file-download",
+    "stdio"
+  ],
+  "author": "HANK572718",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HANK572718/craft_file_mcp.git"
+  },
+  "homepage": "https://github.com/HANK572718/craft_file_mcp#readme",
+  "bugs": {
+    "url": "https://github.com/HANK572718/craft_file_mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
